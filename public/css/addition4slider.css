@@ -1,0 +1,45 @@
+
+.fa-angle-left:before{content:"\25c1"}/*21e6  */
+.fa-angle-right:before{content:"\25b7"}
+.fa{
+    display:inline-block;
+    font:normal normal normal 14px/1 FontAwesome;
+    font-size:inherit;
+    text-rendering:auto;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale
+}
+.bbslider-wrapper:hover .prev-control-wrapper,
+.bbslider-wrapper:hover .next-control-wrapper {
+	opacity: 1; }
+.bbslider-wrapper .prev-control-wrapper,
+.bbslider-wrapper .next-control-wrapper {
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	opacity: 0;
+	transition: opacity 0.3s;
+	z-index: 5;
+	line-height: 60px;
+	/* ACB: // .prev, .next */ }
+.bbslider-wrapper .prev-control-wrapper .prev,
+.bbslider-wrapper .prev-control-wrapper .next,
+.bbslider-wrapper .next-control-wrapper .prev,
+.bbslider-wrapper .next-control-wrapper .next {
+	display: block;
+	text-align: center;
+	width: 50px;
+	color: #fff;
+	text-shadow: 0 0 3px #999;
+	text-decoration: none;
+/* ACB: // &:before */ }
+.bbslider-wrapper .prev-control-wrapper .prev:before,
+.bbslider-wrapper .prev-control-wrapper .next:before,
+.bbslider-wrapper .next-control-wrapper .prev:before,
+.bbslider-wrapper .next-control-wrapper .next:before {
+		line-height: 60px;
+		display: block;
+		font-size: 48px;
+		font-weight: 400; }
+.bbslider-wrapper .prev-control-wrapper {left: 0; }
+.bbslider-wrapper .next-control-wrapper {right: 0; }

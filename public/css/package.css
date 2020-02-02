@@ -1,0 +1,140 @@
+
+
+.logo {
+    display:inline-block;
+    overflow:hidden;
+    /*padding:8px 0px 8px 26px;*/
+    margin-top: 0px;
+    width:196px;
+    height:46px;
+    background: url(../img/Logo.png) no-repeat;
+    padding-left:10px;
+    text-indent: -9999em;  /* in order to remove text */
+}
+
+.card_prop {
+    margin: 7px;
+    padding: 4px;
+    border: 1px solid #888;
+    border-radius: 7px;
+}
+.card_prop:hover{
+    box-shadow:5px 5px 5px #aaa;
+}
+/********* log-in Modal **********/
+.md-header, .md_h4, .md_close {
+  background-color: #222222;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+/**************  end log in  **************/
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    text-decoration: none;
+    /*background: #6d7fcc;*/
+}
+
+/* NIMA*/
+
+/*General Input*/
+input{width: 100%; background: #A1ABB5; transition:all 0.3s; display: inline-block; padding: 0 10px; border-radius: 5px;    border: 1px solid #888; color: rgb(0, 0, 0); font-size: 25px; margin: 10px 0; line-height: 45px;}
+
+/*Calidation styles*/
+/*Only on focus*/
+input:focus{ color: black; background: #97ABBE; border-color:#999;} /*  */
+/*Only on valid*/
+input:valid{box-shadow: 0 0 2px rgb(0, 100, 0);}
+/*Only on focus and valid*/
+input:valid:focus{ background: rgba(80, 177, 109, 0.712); box-shadow: none;  }
+/*Only on invalid*/
+input:invalid{box-shadow: 0 0 3px rgb(255, 41, 41);}
+/*Only on focus and invalid*/
+input:invalid:focus{ background: #CB9089; box-shadow: none; color: black}
+
+
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_password_val*/
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #fff;
+  color: #000;
+  position: relative;
+  padding: 0px;
+  margin-top: .5em;
+  font-size: 12px;
+}
+
+#message div {
+  padding: 0px 0px;
+  font-size: 10px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green; 
+}
+.valid:before {
+  position: relative;
+  left: -5px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+.invalid:before {
+  position: relative;
+  left: -5px;
+  content: "✖";
+}
+
+p.family {  /* just for about.html */
+    margin-bottom: 10px;
+}
+
+/*** Arthur ***/
+.Agents{
+    padding: 10px;
+    font-family: "roboto", sans-serif;
+    font-size: 15px;
+ /*   font-weight: bold;
+    color: rgb(165, 165, 165);*/
+  }
+  ​
+/*
+  ​  ​
+  td{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  ​
+  th{
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 15px;
+    font-family: "robot", sans-serif;
+  }
+  ​
+*/

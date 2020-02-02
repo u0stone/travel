@@ -1,0 +1,96 @@
+
+
+.logo {
+    display:inline-block;
+    overflow:hidden;
+    /*padding:8px 0px 8px 26px;*/
+    margin-top: 0px;
+    width:196px;
+    height:46px;
+    background: url(../img/Logo.png) no-repeat;
+    text-indent: -9999em;  /* in order to remove text */
+}
+
+
+ /* container for Slider */
+ .flex__container {  
+    display: flex;
+    align-items: center;
+    margin-top:20px;
+  /*  margin-left:calc( (100%/2) - (993px/2) );   put it middle of screen */
+   /* border: 1px solid red; */
+}
+
+.area_img:hover {
+  filter:grayscale(85%);
+
+}
+
+/********* log-in Modal **********/
+.md-header, .md_h4, .md_close {
+  background-color: #888;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+/**************  end log in  **************/
+
+
+
+
+/* NIMA*/
+
+/*General Input*/
+input{width: 100%; background: #A1ABB5; transition:all 0.3s; display: inline-block; padding: 0 10px; border-radius: 5px;    border: 1px solid #888; color: rgb(0, 0, 0); font-size: 25px; margin: 10px 0; line-height: 45px;}
+
+/*Calidation styles*/
+/*Only on focus*/
+input:focus{ color: black; background: #97ABBE; border-color:#999;} /*  */
+/*Only on valid*/
+input:valid{box-shadow: 0 0 2px rgb(0, 100, 0);}
+/*Only on focus and valid*/
+input:valid:focus{ background: rgba(80, 177, 109, 0.712); box-shadow: none;  }
+/*Only on invalid*/
+input:invalid{box-shadow: 0 0 3px rgb(255, 41, 41);}
+/*Only on focus and invalid*/
+input:invalid:focus{ background: #CB9089; box-shadow: none; color: black}
+
+
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_password_val*/
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #fff;
+  color: #000;
+  position: relative;
+  padding: 0px;
+  margin-top: .5em;
+  font-size: 12px;
+}
+
+#message div {
+  padding: 0px 0px;
+  font-size: 10px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green; 
+}
+.valid:before {
+  position: relative;
+  left: -5px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+.invalid:before {
+  position: relative;
+  left: -5px;
+  content: "✖";
+}
+/******** End of Nima *********/

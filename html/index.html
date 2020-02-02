@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Travel Agent</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <link rel='stylesheet' href='css/main.css' />     <!-- This is my file. you can use it too -->
+
+    <!-- sources for Slider -->
+    <script src="js/jquery.bbslider.min.js"></script>
+    <link rel='stylesheet' href="css/jquery.bbslider.css" />
+    <link rel='stylesheet' href="css/addition4slider.css" /> 
+    <!-- End of sources for slider -->
+
+    <script src="js/main.js"></script>     <!-- This is my file. you can use it too -->
+</head>
+<body>
+
+<nav class="navbar ">
+    <div class="row-fluid  hidden-xs bg-light ">
+        <div  class="span12 ">
+            <div  class="span6 ">
+                <h1 class="logo"><a href="/">OcTeam</a></h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid navbar-inverse">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="/">TRAVEL EXPERT</a>     <!-- This will stay low resolution of screen (mobile) -->
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/packages">Package</a></li>
+<!--                <li><a href="contact.html">Contact</a></li>   -->
+                <li><a href="/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                LOGINOUT
+<!--
+                <li><a href="#" id="joinus"></span> Join Us</a></li>
+                <li><a href="#" id="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" >
+    <div class="flex__container hidden-xs hidden-sm" >
+          <div id="main">
+              <div id="slideShow" style="width:992px; height:332px; cursor: pointer;">
+                <!--- Will be added by JS from arr_imgLink --->                    
+              </div>
+          </div>
+      </div>
+</div>
+
+<div class="container-fluid bg-3 text-center">    
+    <div class="row" id="arealinks">
+        <!--Will be fillup by JS-->
+    </div> 
+</div><br><br>
+
+
+<!---------------------login Modal---------------------->
+<div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog modal-sm" >
+        <!-- Modal content-->
+        <div class="modal-content" style="padding-bottom: 20px;">
+            <div class="md-header" style="padding:15px 50px;">
+                <h4> Login</h4>
+            </div>
+            <div class="modal-body" style="padding:40px 50px;">
+                <!-- Starting Login Form -->
+                <form role="form">   
+                    <div class="form-group">
+                        <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email</label>
+                        <input type="text" class="form-control" id="uname" name="id" required placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                        <input type="password" class="form-control" id="psw" name="pword" required placeholder="Enter password">
+                    </div>
+                    <div class = "text-center">
+                        <button type="submit" class="btn btn-primary btn-block submit_login"><span class="glyphicon glyphicon-off"></span> Login</button>
+                        <br/><button type="submit" class="btn btn-danger btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                    </div>    
+                </form>
+                <!-- End of Login Form -->
+               
+            </div>
+        </div>
+    </div>
+</div> 
+<!---------------------End of login Modal---------------------->
+
+
+<!---------------------Join us Modal---------------------->
+<div class="modal fade" id="joinusModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content" style="padding-bottom: 20px;">
+            <div class="md-header" style="padding:15px 50px;">
+                <h4>Join Us</h4>
+            </div>
+            <div class="modal-body" style="padding:40px 50px;">
+                <!-- Starting JoinUs Form -->
+                <form role="form">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" 
+                            name="email" 
+                            placeholder="your@email.com" 
+                            autofocus
+                            required 
+                            pattern= "^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"> <!--taken from: https://www.w3.org/TR/2012/WD-html-markup-20120320/input.email.html-->
+                           <!--  "[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+" >   -->
+                           <!-- "[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"> -->
+                            <!-- Apparently pattern does not validate when the field will get autopopulated!! -->
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="pword" name="name" placeholder="Password" required pattern= "[\w]{4,}$">
+                        </div>
+                        <div class="form-group col-md-4" id="message">
+                            Password must contain:
+                            <div id="pword_Info_letter" class="invalid">A <b>lowercase</b> letter</div>
+                            <div id="pword_Info_capital" class="invalid">A <b>capital (uppercase)</b> letter</div>
+                            <div id="pword_Info_number" class="invalid">A <b>number</b></div>
+                            <div id="pword_Info_length" class="invalid">Minimum <b>8 characters</b></div>
+                          </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputfName4">First Name</label>
+                            <input type="fname" class="form-control" id="fname" name="fname" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputlName4">Last Name</label>
+                            <input type="lname" class="form-control" id="lname" name="lname" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputfName4">Home Phone</label>
+                            <input type="text" class="form-control" id="hphone" name="hphone" placeholder="Home Phone" >
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputlName4">Business Phone</label>
+                            <input type="text" class="form-control" id="bphone" name="bphone" placeholder="Business Phone" >
+                        </div>
+                    </div>                    
+                    <div class="form-group col-md-12">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" name="addr1" required placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2" name="addr2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" name="city" id="inputCity" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputState" >Province</label>
+                            <select id="inputState" style="margin-top:10px;" name="state" class="form-control" required>
+                                <option Value=""></option>
+                                <option>AB</option>  <option>BC</option>  <option>MB</option>  <option>NB</option>
+                                <option>NS</option>  <option>NT</option>  <option>NU</option>  <option>ON</option>
+                                <option>PE</option>  <option>QC</option>  <option>YT</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputZip">Postal Code</label>
+                            <input type="text" name="zip" class="form-control" id="inputZip" required 
+                            pattern = "^((\d{5}-?\d{4})|(\d{5})|([A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d))$"> <!--Src: http://regexlib.com/Search.aspx?k=us+zip+code&c=-1&m=-1&ps=20&AspxAutoDetectCookieSupport=1-->
+                        </div>
+                    </div>
+					<div class = text-center>
+                    <button type="submit" class="btn btn-primary btn-block submit_joinus"><span class="glyphicon glyphicon-off"></span> Sign In</button>
+                    <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
+                                  
+                            <br/><button type="submit" class="btn btn-danger btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button><br/>
+                        </div>
+                </form>
+                <!-- End of JoinUs Form -->
+            </div> 
+        </div>
+    </div>  
+</div>
+<!---------------------End of Join Us Modal---------------------->
+<div class="modal"  id="msgModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="modalMsgHeader">Message from Server</span>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4><p id="modalMsgBody"></p></h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
