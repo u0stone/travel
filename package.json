@@ -17,7 +17,7 @@
     "mongoose": "^5.7.12",
     "morgan": "^1.9.1",
     "path": "^0.12.7",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "nodaemon": "0.0.5",
